@@ -41,7 +41,22 @@ struct ContentView: View {
                     .padding(.leading,20)
                 
                 
-                
+                Button {
+                    print("salam")
+                } label: {
+                    Text("Sign in").foregroundColor(.white)
+                        .font(.custom("Questrial-Regular", size: 25))
+                        .padding(.leading,75)
+                        .padding(.trailing,75)
+                        .padding(.top,40)
+                        .padding(.bottom,40)
+                        .background(Color("Cars", bundle: nil))
+                        
+                }.cornerRadius(40)
+                .padding(.top, 230)
+                    
+                    
+
                 Spacer()
                 
                     
