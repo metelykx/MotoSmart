@@ -21,7 +21,7 @@ struct ContentView: View {
                 Text("Login").font(.custom("Questrial-Regular", size: 27))
                     .foregroundColor(.white)
                     .padding(.top,10)
-                    .padding(.trailing, 280)
+                    .padding(.trailing, 290)
                 
                 TextField("", text: $text)
                     .textFieldStyle(.roundedBorder)
@@ -33,6 +33,15 @@ struct ContentView: View {
                     .font(.custom("Questrial-Regular", size: 27))
                     .padding(.top,30)
                     .padding(.trailing,235)
+                
+                
+                TextField("", text: $text)
+                    .textFieldStyle(.roundedBorder)
+                    .padding(.trailing,20)
+                    .padding(.leading,20)
+                
+                
+                
                 Spacer()
                 
                     
