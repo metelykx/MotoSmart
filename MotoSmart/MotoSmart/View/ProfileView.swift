@@ -9,16 +9,23 @@ import SwiftUI
 
 struct ProfileView: View {
     var body: some View {
-        ZStack {
-            Color("background", bundle: nil).ignoresSafeArea()
-            VStack {
-                Text("MotoSmart").foregroundColor(.white)
-                    .font(.custom("AbrilFatface-Regular", size: 35))
-            }.navigationBarBackButtonHidden(true)
-                .navigationBarHidden(true)
+        
+                
+                TabView {
+                    HomeView()
+                        .tabItem { Image(systemName: "house") }
+                    
+                    OrdersView()
+                        .tabItem {
+                            Image(systemName: "")
+                        }
+                    FavouritesView()
+                        .tabItem { Image(systemName: "") }
+                }
+            }
         }
-    }
-}
+    
+
 
 #Preview {
     ProfileView()
