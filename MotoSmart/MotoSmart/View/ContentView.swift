@@ -13,6 +13,13 @@ struct ContentView: View {
         
         ZStack {
             Color("background", bundle: nil).ignoresSafeArea()
+            Image("carPicture", bundle: nil)
+                .resizable()
+                                .scaledToFit()
+                                .frame(width: UIScreen.main.bounds.width) // Занимает всю ширину экрана
+                                .offset(x: -UIScreen.main.bounds.width / 2) // Смещение влево на 1/4 экрана
+                                .padding(.top, 240)
+                
             VStack {
                 Text("MotoSmart").foregroundColor(.white)
                     .font(.custom("AbrilFatface-Regular", size: 35))
