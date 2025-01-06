@@ -13,14 +13,16 @@ struct ProfileView: View {
                 
                 TabView {
                     HomeView()
-                        .tabItem { Image(systemName: "house") }
+                        .tabItem { Image(systemName: "house.fill") }
                     
                     OrdersView()
                         .tabItem {
-                            Image(systemName: "")
+                            Image(systemName: "car.fill")
                         }
+                    MessageWithAssistentView()
+                        .tabItem { Image(systemName: "message.fill") }
                     FavouritesView()
-                        .tabItem { Image(systemName: "") }
+                        .tabItem { Image(systemName: "heart.fill") }
                 }
             }
         }

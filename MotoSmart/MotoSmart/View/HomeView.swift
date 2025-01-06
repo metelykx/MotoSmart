@@ -11,10 +11,16 @@ struct HomeView: View {
     var body: some View {
         ZStack {
             Color("background", bundle: nil).ignoresSafeArea()
-            Text("MotoSmart")
+            VStack {
+                Text("MotoSmart").foregroundColor(.white)
+                    .font(.custom("AbrilFatface-Regular", size: 35))
+                    .padding(.top,10)
+                    .padding(.trailing,200)
                 
-            
-            Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+                
+                Spacer()
+            }.navigationBarBackButtonHidden(true) 
+                .navigationBarHidden(true)
         }
     }
 }
