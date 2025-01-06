@@ -1,10 +1,3 @@
-//
-//  ContentView.swift
-//  MotoSmart
-//
-//  Created by Denis Ivaschenko on 04.01.2025.
-//
-
 import SwiftUI
 
 struct ContentView: View {
