@@ -14,7 +14,7 @@ struct AuthView: View {
                     .font(.custom("AbrilFatface-Regular", size: 35))
                     .padding(.top, 100)
                 
-                // Добавляем текст в иерархию View
+            
                 createText(text: "Login", colorText: .white)
                     .padding(.trailing, 290).padding(.top,10)
                 TextField("", text: $login)
@@ -39,6 +39,22 @@ struct AuthView: View {
                     .padding(.trailing,20)
                     .padding(.leading,20)
                 
+                
+                
+                Button {
+                    print("salam")
+                } label: {
+                    Text("Sign up").foregroundColor(.white)
+                        .font(.custom("Questrial-Regular", size: 25))
+                        .padding(.leading,75)
+                        .padding(.trailing,75)
+                        .padding(.top,40)
+                        .padding(.bottom,40)
+                        .background(Color("Cars", bundle: nil))
+                    
+                }.cornerRadius(40)
+                    .padding(.top, 150)
+
                 Spacer()
             }
         }
