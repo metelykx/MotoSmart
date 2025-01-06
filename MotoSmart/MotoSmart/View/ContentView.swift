@@ -9,6 +9,7 @@ import SwiftUI
 
 struct ContentView: View {
     @State var text: String = ""
+    @State var pass: String = ""
     var body: some View {
         NavigationView {
             
@@ -44,7 +45,7 @@ struct ContentView: View {
                         .padding(.trailing,235)
                     
                     
-                    TextField("", text: $text)
+                    TextField("", text: $pass)
                         .textFieldStyle(.roundedBorder)
                         .padding(.trailing,20)
                         .padding(.leading,20)
