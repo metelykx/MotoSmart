@@ -53,7 +53,7 @@ struct AuthView: View {
                         .background(Color("Cars", bundle: nil))
                     
                 }.cornerRadius(40)
-                    .padding(.top, 150)
+                    .padding(.top, 100)
 
                 Spacer()
             }
