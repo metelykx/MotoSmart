@@ -22,8 +22,16 @@ struct AuthView: View {
                     .padding(.trailing,20)
                     .padding(.leading,20)
                 
+                createText(text: "Password", colorText: .white)
+                    .padding(.trailing,235)
+                    .padding(.top,30)
+                
+                SecureField("", text: $password).textFieldStyle(.roundedBorder)
+                    .padding(.trailing,20)
+                    .padding(.leading,20)
                 
                 
+                c
                 Spacer()
             }
         }
