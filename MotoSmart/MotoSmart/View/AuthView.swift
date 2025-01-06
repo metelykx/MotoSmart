@@ -33,8 +33,11 @@ struct AuthView: View {
                 
                 createText(text: "Repeat ", colorText: .white)
                     .padding(.top, 30)
-                    .padding(.trailing,250)
+                    .padding(.trailing,255)
                 
+                SecureField("", text: $repeatPassword).textFieldStyle(.roundedBorder)
+                    .padding(.trailing,20)
+                    .padding(.leading,20)
                 
                 Spacer()
             }
