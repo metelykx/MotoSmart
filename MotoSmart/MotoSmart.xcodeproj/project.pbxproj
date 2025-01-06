@@ -30,20 +30,6 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
-		CCE78BB72D29C1AB00A71A0B /* Exceptions for "MotoSmart" folder in "MotoSmartTests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"LilitaOne-Regular.ttf",
-			);
-			target = CCE78B922D29BB1F00A71A0B /* MotoSmartTests */;
-		};
-		CCE78BB82D29C1AB00A71A0B /* Exceptions for "MotoSmart" folder in "MotoSmartUITests" target */ = {
-			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
-			membershipExceptions = (
-				"LilitaOne-Regular.ttf",
-			);
-			target = CCE78B9C2D29BB1F00A71A0B /* MotoSmartUITests */;
-		};
 		CCE78BBA2D29C1C400A71A0B /* Exceptions for "MotoSmart" folder in "MotoSmart" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
@@ -58,8 +44,6 @@
 			isa = PBXFileSystemSynchronizedRootGroup;
 			exceptions = (
 				CCE78BBA2D29C1C400A71A0B /* Exceptions for "MotoSmart" folder in "MotoSmart" target */,
-				CCE78BB72D29C1AB00A71A0B /* Exceptions for "MotoSmart" folder in "MotoSmartTests" target */,
-				CCE78BB82D29C1AB00A71A0B /* Exceptions for "MotoSmart" folder in "MotoSmartUITests" target */,
 			);
 			path = MotoSmart;
 			sourceTree = "<group>";
