@@ -31,7 +31,11 @@ struct AuthView: View {
                     .padding(.leading,20)
                 
                 
-                c
+                createText(text: "Repeat ", colorText: .white)
+                    .padding(.top, 30)
+                    .padding(.trailing,250)
+                
+                
                 Spacer()
             }
         }
