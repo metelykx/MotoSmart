@@ -19,7 +19,7 @@ struct ProfileView: View {
                         .tabItem {
                             Image(systemName: "car.fill")
                         }
-                    MessageWithAssistentView()
+                    MessageWithAssistantView()
                         .tabItem { Image(systemName: "message.fill") }
                     FavouritesView()
                         .tabItem { Image(systemName: "heart.fill") }
