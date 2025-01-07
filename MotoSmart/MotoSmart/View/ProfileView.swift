@@ -18,24 +18,24 @@ struct ProfileView: View {
             UITabBar.appearance().standardAppearance = appearance
             UITabBar.appearance().scrollEdgeAppearance = appearance
         }
-    var body: some View {
-        
-                
+var body: some View {
                 TabView {
                     HomeView()
                         .tabItem { Image(systemName: "house.fill") }
                     
+                    
+                    MessageWithAssistantView()
+                        .tabItem { Image(systemName: "message.fill") }
+                    
+                    FavouritesView()
+                        .tabItem { Image(systemName: "heart.fill") }
                     OrdersView()
                         .tabItem {
                             Image(systemName: "car.fill")
                         }
-                    MessageWithAssistantView()
-                        .tabItem { Image(systemName: "message.fill") }
-                    FavouritesView()
-                        .tabItem { Image(systemName: "heart.fill") }
                 }.accentColor(Color("Cars", bundle: nil)) // Цвет выбранной вкладки
-            }
-        }
+    }
+}
     
 
 

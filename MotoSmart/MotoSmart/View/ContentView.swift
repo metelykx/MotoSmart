@@ -3,6 +3,8 @@ import SwiftUI
 struct ContentView: View {
     @State var text: String = ""
     @State var pass: String = ""
+    @State var alertMessage: String = ""
+    @State var alertShow: Bool = false
     
     var body: some View {
         NavigationView {
