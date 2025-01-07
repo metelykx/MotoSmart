@@ -3,8 +3,8 @@ import SwiftUI
 struct ContentView: View {
     @State var text: String = ""
     @State var pass: String = ""
-    @State var alertMessage: String = ""
-    @State var alertShow: Bool = false
+    @State private var showAlert = false
+    @State private var alertMessage = ""
     
     var body: some View {
         NavigationView {
@@ -54,9 +54,9 @@ struct ContentView: View {
                     }
                     .padding(.top, 10)
                     
-                    NavigationLink {
-                        ProfileView()
-                    } label: {
+                    Button(action: {
+                        validatePassword()
+                    }) {
                         Text("Sign in")
                             .foregroundColor(.white)
                             .font(.custom("Questrial-Regular", size: 25))
@@ -68,9 +68,37 @@ struct ContentView: View {
                             .cornerRadius(40)
                     }
                     .padding(.top, 235)
+                    .alert(isPresented: $showAlert) {
+                        Alert(
+                            title: Text("Error"),
+                            message: Text(alertMessage),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
                     
                     Spacer()
                 }
+            }
+        }
+    }
+    
+    private func validatePassword() {
+        if pass.count < 8 && pass.count > 0 {
+            alertMessage = "Password must be at least 8 characters long."
+            showAlert = true
+        } else if pass.count == 0 {
+            alertMessage = "fill in the Password"
+            showAlert = true
+        }
+        
+        
+        
+        
+        
+        else {
+            // Переход на следующий экран или выполнение других действий
+            NavigationLink(destination: ProfileView()) {
+                EmptyView()
             }
         }
     }
