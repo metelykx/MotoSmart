@@ -5,6 +5,7 @@ struct ContentView: View {
     @State var pass: String = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
+    @State private var navigateToProfile = false // Состояние для перехода
     
     var body: some View {
         NavigationView {
@@ -40,7 +41,7 @@ struct ContentView: View {
                         .padding(.top, 30)
                         .padding(.trailing, 235)
                     
-                    TextField("", text: $pass)
+                    SecureField("", text: $pass) // Используем SecureField для пароля
                         .textFieldStyle(.roundedBorder)
                         .padding(.trailing, 20)
                         .padding(.leading, 20)
@@ -76,6 +77,11 @@ struct ContentView: View {
                         )
                     }
                     
+                    // Скрытый NavigationLink для перехода
+                    NavigationLink(destination: ProfileView(), isActive: $navigateToProfile) {
+                        EmptyView()
+                    }
+                    
                     Spacer()
                 }
             }
@@ -83,23 +89,23 @@ struct ContentView: View {
     }
     
     private func validatePassword() {
-        if pass.count < 8 && pass.count > 0 {
-            alertMessage = "Password must be at least 8 characters long."
+        if text.count < 3 {
+            alertMessage = "The login must be at least 3 characters long."
             showAlert = true
-        } else if pass.count == 0 {
-            alertMessage = "fill in the Password"
+        } else if pass.isEmpty {
+            alertMessage = "Please fill in the password."
             showAlert = true
-        }
-        
-        
-        
-        
+        } else if pass.count < 8 {
+            alertMessage = "The password must be at least 8 characters long."
+            showAlert = true
+        } else if text.count == 0 {
+            alertMessage = "Please fill in the login"
+            showAlert = true
+        } 
         
         else {
-            // Переход на следующий экран или выполнение других действий
-            NavigationLink(destination: ProfileView()) {
-                EmptyView()
-            }
+            // Устанавливаем состояние для перехода
+            navigateToProfile = true
         }
     }
 }
