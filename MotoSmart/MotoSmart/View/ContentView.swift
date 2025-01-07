@@ -89,25 +89,36 @@ struct ContentView: View {
     }
     
     private func validatePassword() {
-        if text.count < 3 {
-            alertMessage = "The login must be at least 3 characters long."
-            showAlert = true
-        } else if pass.isEmpty {
-            alertMessage = "Please fill in the password."
-            showAlert = true
-        } else if pass.count < 8 {
-            alertMessage = "The password must be at least 8 characters long."
-            showAlert = true
-        } else if text.count == 0 {
-            alertMessage = "Please fill in the login"
-            showAlert = true
-        } 
-        
-        else {
-            // Устанавливаем состояние для перехода
-            navigateToProfile = true
-        }
-    }
+        // Проверка на пробелы в логине
+               if text.contains(" ") {
+                   alertMessage = "Login cannot contain spaces."
+                   showAlert = true
+               }
+               // Проверка, что логин не состоит только из цифр
+               else if text.rangeOfCharacter(from: CharacterSet.decimalDigits.inverted) == nil {
+                   alertMessage = "Login cannot consist only of numbers."
+                   showAlert = true
+               }
+               // Проверка длины логина
+               else if text.count < 3 {
+                   alertMessage = "The login must be at least 3 characters long."
+                   showAlert = true
+               }
+               // Проверка, что пароль не пустой
+               else if pass.isEmpty {
+                   alertMessage = "Please fill in the password."
+                   showAlert = true
+               }
+               // Проверка длины пароля
+               else if pass.count < 8 {
+                   alertMessage = "The password must be at least 8 characters long."
+                   showAlert = true
+               }
+               // Если все проверки пройдены, переходим на следующий экран
+               else {
+                   navigateToProfile = true
+               }
+           }
 }
 
 #Preview {
